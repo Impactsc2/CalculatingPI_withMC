@@ -2,3 +2,5 @@ RADIUS:
 1
 numberOfPoints:
 1000000
+seed:
+123456789
