@@ -1,6 +1,6 @@
 RADIUS:
-1
+5
 numberOfPoints:
-1000000
+50
 seed:
 123456789

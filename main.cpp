@@ -10,7 +10,12 @@
 int main(){
 
     SimulationSettings simulationSettings;
-    ReadInputFile(simulationSettings);   
+    ReadInputFile(simulationSettings);
+
+    std::cout << simulationSettings.RADIUS  << std::endl;
+    std::cout << simulationSettings.RAD_SQ  << std::endl;
+    std::cout << simulationSettings.generatorSeed  << std::endl;
+    std::cout << simulationSettings.numberOfPoints  << std::endl;
 
     srand (simulationSettings.generatorSeed);
 

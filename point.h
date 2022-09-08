@@ -1,12 +1,18 @@
 #ifndef POINT_H
 #define POINT_H
-#include "SimulationSettings.h"
+// #include "SimulationSettings.h"
 
 class Point{
     public:
-        void SetCoordiates(SimulationSettings simulationSettings);
-        double GenerateNumber(SimulationSettings simulationSettings);
-        int IsInsideCircle(SimulationSettings simulationSettings);
+
+        /* Ta domyslna wartosc pozwoli wykonac konstruktor bez parametru
+         * co umozliwilo by deklaracje calej tablicy obiektow, tak jak Pan mial
+         * to zrobione. W moim podejsciu jest to zbedne
+         */
+        Point(double R = 1e0);
+        ~Point();
+        double GenerateNumber(double RSQ);
+        int IsInsideCircle(double R);
 
     private:
         double x;
