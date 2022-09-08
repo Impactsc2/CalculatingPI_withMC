@@ -4,7 +4,7 @@
 #include <math.h>
 #include "SimulationSettings.h"
 #include "io.h"
-#include "point.h"
+// #include "point.h"
 #include "tools.h"
 
 int main(){
