@@ -1,4 +1,6 @@
 RADIUS:
 1
-numberOfPoints:
-1000000
+numberOfPoints(must be divisible by 100):
+10000000
+generatorSeed:
+780428172

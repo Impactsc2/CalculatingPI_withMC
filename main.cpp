@@ -4,19 +4,18 @@
 #include <math.h>
 #include "SimulationSettings.h"
 #include "io.h"
-#include "point.h"
 #include "tools.h"
 
-int main(){
+int main(int argc, char** argv){
 
     SimulationSettings simulationSettings;
-    ReadInputFile(simulationSettings);   
+
+    ReadInputFile(simulationSettings, "input.txt");
+    CoutSimulationSettings(simulationSettings);
 
     srand (simulationSettings.generatorSeed);
 
-    std::cout.precision(20);
-    std::cout << std::fixed << CalculatingPI(simulationSettings) << std::endl;
-
-
+    CreateProgressCounter();
+    CoutResults(CalculatingPI(simulationSettings), 30);
     return 0;
 }

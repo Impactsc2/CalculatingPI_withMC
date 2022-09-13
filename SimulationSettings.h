@@ -7,6 +7,8 @@ struct SimulationSettings{
     long int numberOfPoints;
     int generatorSeed;
 
+    // constructor:
+    SimulationSettings();
 };
 
 #endif

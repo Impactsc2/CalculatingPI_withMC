@@ -2,6 +2,7 @@
 #include <iostream>
 #include "tools.h"
 #include "point.h"
+#include  "io.h"
 
 
 double urand(){
@@ -12,13 +13,20 @@ double urand(){
 int CountingPointsInsideCircle(SimulationSettings simulationSettings){
 
     int counter = 0;
-    
-    Point *point = new  Point[simulationSettings.numberOfPoints];
+    long int interval = simulationSettings.numberOfPoints / 10;
+
+    // signal that counting starts
+    CoutProgress();
 
     // This loop is counting how many generated points are inside the circle
-    for (int i = 0 ; i < simulationSettings.numberOfPoints ; i++){
-        point[i].SetCoordiates(simulationSettings);
-        counter += point[i].IsInsideCircle(simulationSettings);
+    for (int i = 1 ; i <= simulationSettings.numberOfPoints ; i++){
+        Point *point = new Point(simulationSettings.RADIUS);
+
+        counter += point->IsInsideCircle(simulationSettings.RAD_SQ);
+
+        delete point;
+
+        if (! (i % interval)) {CoutProgress();}
     }
     return counter;
 }

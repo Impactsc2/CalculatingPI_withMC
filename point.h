@@ -1,12 +1,13 @@
 #ifndef POINT_H
 #define POINT_H
-#include "SimulationSettings.h"
 
 class Point{
     public:
-        void SetCoordiates(SimulationSettings simulationSettings);
-        double GenerateNumber(SimulationSettings simulationSettings);
-        int IsInsideCircle(SimulationSettings simulationSettings);
+        // constructor:
+        Point(double R);
+
+        double GenerateNumber(double R);
+        int IsInsideCircle(double RSQ);
 
     private:
         double x;
